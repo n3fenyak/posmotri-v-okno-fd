@@ -134,6 +134,11 @@ ol {
 
 .content__video-card-description {
   line-height: 0.9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .content__video-card-description-container {
@@ -172,10 +177,15 @@ ol {
 }
 
 .content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 30px;
   max-width: 196px;
   line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -203,7 +213,8 @@ ol {
   border-bottom: 1px solid #fff;
   min-width: 226px;
   color: #fff;
-  background-color: #1b1919;
+  background-color: transparent;
+  /* background-color: #1b1919; */
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   appearance: none;
@@ -255,7 +266,8 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
+  border: 1px solid currentColor;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
